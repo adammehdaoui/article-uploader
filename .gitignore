@@ -1,7 +1,7 @@
 Server/HELP.md
 Server/.gradle
 Server/build/
-Server/!gradle/wrapper/gradle-wrapper.jar
+Server/gradle/wrapper/gradle-wrapper.jar
 Server/!**/src/main/**/build/
 Server/!**/src/test/**/build/
 
