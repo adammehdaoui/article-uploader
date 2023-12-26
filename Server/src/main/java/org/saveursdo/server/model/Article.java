@@ -1,7 +1,6 @@
 package org.saveursdo.server.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 @Entity
 @Table(name = "articles")
@@ -17,6 +16,14 @@ public class Article {
     public Article() {
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
     @Override
     public boolean equals(Object o){
         return o instanceof Article a
@@ -28,4 +35,13 @@ public class Article {
     public int hashCode(){
         return (int)id ^ content.hashCode();
     }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", content='" + content + '\'' +
+                '}';
+    }
+
 }
