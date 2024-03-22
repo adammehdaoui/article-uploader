@@ -1,6 +1,6 @@
-package org.saveursdo.server.repository;
+package org.saveursdo.server.article;
 
-import org.saveursdo.server.model.Article;
+import org.saveursdo.server.article.Article;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

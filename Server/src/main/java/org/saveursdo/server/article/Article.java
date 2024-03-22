@@ -1,4 +1,4 @@
-package org.saveursdo.server.model;
+package org.saveursdo.server.article;
 
 import jakarta.persistence.*;
 

@@ -1,7 +1,7 @@
-package org.saveursdo.server.service;
+package org.saveursdo.server.article;
 
-import org.saveursdo.server.model.Article;
-import org.saveursdo.server.repository.ArticleRepository;
+import org.saveursdo.server.article.Article;
+import org.saveursdo.server.article.ArticleRepository;
 import org.springframework.stereotype.Service;
 
 @Service
