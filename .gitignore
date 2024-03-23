@@ -28,3 +28,6 @@ Server//.nb-gradle/
 
 ### VS Code ###
 Server/.vscode/
+
+### AWS Secrets ###
+rootkey.properties
