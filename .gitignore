@@ -1,33 +1,39 @@
 ### STS ###
-Server/.apt_generated
-Server/.classpath
-Server/.factorypath
-Server/.project
-Server/.settings
-Server/.springBeans
-Server/.sts4-cache
-Server/bin/
-Server/!**/src/main/**/bin/
-Server/!**/src/test/**/bin/
+server/.apt_generated
+server/.classpath
+server/.factorypath
+server/.project
+server/.settings
+server/.springBeans
+server/.sts4-cache
+server/bin/
+server/!**/src/main/**/bin/
+server/!**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-Server/.idea
-Server/*.iws
-Server/*.iml
-Server/*.ipr
-Server/out/
-Server/!**/src/main/**/out/
-Server/!**/src/test/**/out/
+server/.idea
+server/*.iws
+server/*.iml
+server/*.ipr
+server/out/
+server/!**/src/main/**/out/
+server/!**/src/test/**/out/
 
 ### NetBeans ###
-Server//nbproject/private/
-Server//nbbuild/
-Server//dist/
-Server//nbdist/
-Server//.nb-gradle/
+server//nbproject/private/
+server//nbbuild/
+server//dist/
+server//nbdist/
+server//.nb-gradle/
 
 ### VS Code ###
-Server/.vscode/
+server/.vscode/
+server/.DS_Store
+client/.DS_Store
 
 ### AWS Secrets ###
 rootkey.properties
+
+### Maven ###
+server/target/
+server/.mvn/wrapper/
