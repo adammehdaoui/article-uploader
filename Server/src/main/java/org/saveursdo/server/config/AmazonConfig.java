@@ -1,8 +1,10 @@
 package org.saveursdo.server.config;
 
+import org.springframework.context.annotation.Bean;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.AwsCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
+import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,6 +16,7 @@ import java.util.Properties;
 @Configuration
 public class AmazonConfig {
 
+    @Bean
     public S3Client s3() throws IOException {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream("rootkey.properties");
         Properties properties = new Properties();
@@ -27,7 +30,10 @@ public class AmazonConfig {
                 secretAccessKey
         );
 
-        return S3Client.builder().credentialsProvider(StaticCredentialsProvider.create(awsCredentials)).build();
+        return S3Client.builder()
+                .region(Region.EU_WEST_3)
+                .credentialsProvider(StaticCredentialsProvider.create(awsCredentials))
+                .build();
     }
 
 }

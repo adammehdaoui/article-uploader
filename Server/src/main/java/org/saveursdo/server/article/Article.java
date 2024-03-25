@@ -8,7 +8,7 @@ public class Article {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
     @Column(name = "content")
     private String content;
@@ -33,7 +33,7 @@ public class Article {
 
     @Override
     public int hashCode(){
-        return (int)id ^ content.hashCode();
+        return id ^ content.hashCode();
     }
 
     @Override
