@@ -37,3 +37,6 @@ rootkey.properties
 ### Maven ###
 server/target/
 server/.mvn/wrapper/
+
+### Java ###
+*.class

@@ -8,7 +8,7 @@ public class ServerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ServerApplication.class, args);
-		System.out.println("Back-end started");
+		System.out.println("saveursdo server started on port 8080");
 	}
 
 }
