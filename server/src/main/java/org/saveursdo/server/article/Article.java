@@ -13,6 +13,9 @@ public class Article {
     @Column(name = "content")
     private String content;
 
+    @Column(name = "imageLink")
+    private String imageLink;
+
     public Article() {
     }
 
@@ -22,6 +25,10 @@ public class Article {
 
     public String getContent() {
         return content;
+    }
+
+    public String getImageLink() {
+        return imageLink;
     }
 
     @Override
