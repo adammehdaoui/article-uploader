@@ -1,4 +1,4 @@
-import ArticleList from "../../components/ArticlesList/ArticlesList";
+import ArticleList from "../../components/articlesList/ArticlesList";
 import "./Home.css";
 
 export default function Home() {

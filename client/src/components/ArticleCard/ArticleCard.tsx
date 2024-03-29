@@ -1,4 +1,5 @@
-import DropZone from "../DropZone/DropZone";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import DropZone from "../dropZone/DropZone";
 import "./ArticleCard.css";
 
 export default function ArticleCard({
@@ -11,11 +12,12 @@ export default function ArticleCard({
   imageLink: string;
 }) {
   return (
-    <div className="card">
-      <h1>{id}</h1>
-      <p>{content}</p>
-      <p>Image path is {imageLink || "no set"}</p>
+    <Card className="card">
+      <CardHeader>ID Article : {id}</CardHeader>
+      <CardContent>
+        Content : {content}; Image path is {imageLink || "no set"}
+      </CardContent>
       <DropZone />
-    </div>
+    </Card>
   );
 }

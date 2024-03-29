@@ -2,7 +2,7 @@ package org.saveursdo.server.bucket;
 
 public enum BucketName {
 
-    PROFILE_IMAGE("saveursdo-image-upload");
+    PROFILE_IMAGE("saveursdo-image-upload-123");
 
     private final String bucketName;
 

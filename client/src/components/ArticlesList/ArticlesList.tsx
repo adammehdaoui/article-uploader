@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { Article } from "../../validators/Article";
-import ArticleCard from "../ArticleCard/ArticleCard";
+import ArticleCard from "../articleCard/ArticleCard";
 import "./ArticlesList.css";
+import axios from "axios";
 
 export default function ArticlesList() {
   const { isPending, error, data } = useQuery({
@@ -27,6 +28,7 @@ export default function ArticlesList() {
             id={article.id}
             content={article.content}
             imageLink={article.imageLink}
+            key={`${article.id}-${crypto.randomUUID()}`}
           />
         ))}
       </div>

@@ -48,7 +48,6 @@ public class ArticleService {
         fileStore.save(
                 "article-" + articleID,
                 file.getOriginalFilename(),
-                Optional.of(Map.of("test", "test")),
                 file.getInputStream()
         );
     }

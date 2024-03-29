@@ -30,7 +30,7 @@ public class ArticleController {
     }
 
     @PostMapping(
-            path = "{id}/image/download",
+            path = "{id}/image/upload",
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
