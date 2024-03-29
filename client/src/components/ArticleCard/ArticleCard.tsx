@@ -1,3 +1,4 @@
+import DropZone from "../DropZone/DropZone";
 import "./ArticleCard.css";
 
 export default function ArticleCard({
@@ -14,6 +15,7 @@ export default function ArticleCard({
       <h1>{id}</h1>
       <p>{content}</p>
       <p>Image path is {imageLink || "no set"}</p>
+      <DropZone />
     </div>
   );
 }
