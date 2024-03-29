@@ -1,14 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 import { Article } from "../../validators/Article";
 import ArticleCard from "../articleCard/ArticleCard";
 import "./ArticlesList.css";
-import axios from "axios";
 
 export default function ArticlesList() {
   const { isPending, error, data } = useQuery({
     queryKey: ["articles"],
     queryFn: () =>
-      fetch("http://localhost:8080/api/v1/articles").then((res) => res.json()),
+      axios
+        .get("http://localhost:8080/api/v1/articles")
+        .then((res) => res.data),
   });
 
   if (isPending) {
