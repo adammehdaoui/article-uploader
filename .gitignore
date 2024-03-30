@@ -30,6 +30,7 @@ server//.nb-gradle/
 server/.vscode/
 server/.DS_Store
 client/.DS_Store
+.DS_Store
 
 ### AWS Secrets ###
 rootkey.properties
