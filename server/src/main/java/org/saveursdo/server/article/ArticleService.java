@@ -45,12 +45,6 @@ public class ArticleService {
             throw new IllegalStateException("File must be an image [" + file.getContentType() + "]");
         }
 
-        fileStore.save(
-                "article-" + articleID,
-                file.getOriginalFilename(),
-                file.getInputStream()
-        );
-
         Optional<Article> article = articleRepository.findById((long) articleID);
         if(article.isEmpty()) {
             throw new IllegalStateException("Article with ID [" + articleID + "] does not exist");
@@ -59,5 +53,13 @@ public class ArticleService {
         Article articleObject = article.get();
 
         articleObject.setImageLink(file.getOriginalFilename());
+
+        articleRepository.save(articleObject);
+
+        fileStore.save(
+                "article-" + articleID,
+                file.getOriginalFilename(),
+                file.getInputStream()
+        );
     }
 }

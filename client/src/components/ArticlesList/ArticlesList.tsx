@@ -21,6 +21,12 @@ export default function ArticlesList() {
     return <div>Error: {error.message}</div>;
   }
 
+  data.sort((a: Article, b: Article) => {
+    if (a.id < b.id) return -1;
+    if (a.id > b.id) return 1;
+    return 0;
+  });
+
   return (
     <div>
       <h1>Articles List</h1>
