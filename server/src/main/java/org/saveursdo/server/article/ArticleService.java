@@ -50,5 +50,14 @@ public class ArticleService {
                 file.getOriginalFilename(),
                 file.getInputStream()
         );
+
+        Optional<Article> article = articleRepository.findById((long) articleID);
+        if(article.isEmpty()) {
+            throw new IllegalStateException("Article with ID [" + articleID + "] does not exist");
+        }
+
+        Article articleObject = article.get();
+
+        articleObject.setImageLink(file.getOriginalFilename());
     }
 }

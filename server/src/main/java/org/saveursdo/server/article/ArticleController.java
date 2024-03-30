@@ -8,7 +8,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/v1")
 public class ArticleController {
 
@@ -24,17 +23,19 @@ public class ArticleController {
         return "Application is working!";
     }
 
+    @CrossOrigin(origins = "http://localhost:3000/")
     @GetMapping("/articles")
     public Iterable<Article> getArticles() {
         return articleService.getArticles();
     }
 
+    @CrossOrigin(origins = "http://localhost:3000/")
     @PostMapping(
             path = "{id}/image/upload",
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public void uploadArticleImage(@PathVariable("id") int articleID, @RequestParam("file") MultipartFile file)
+    public void uploadArticleImage(@PathVariable("id") int articleID, @RequestParam(value = "file") MultipartFile file)
             throws IOException {
         articleService.uploadArticleImage(articleID, file);
     }

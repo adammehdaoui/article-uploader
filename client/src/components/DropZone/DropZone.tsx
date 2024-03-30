@@ -7,7 +7,7 @@ import "./DropZone.css";
 import axios from "axios";
 import type { FormContent } from "../../validators/FormContent";
 
-export default function DropZone() {
+export default function DropZone({ id }: { id: string }) {
   const { register, handleSubmit } = useForm<FormContent>();
   const onSubmit = (form: FormContent) => {
     const file = form.file[0];
@@ -16,7 +16,7 @@ export default function DropZone() {
     formData.append("file", file);
 
     axios
-      .post(`http://localhost:8080/api/v1/1/image/upload`, formData, {
+      .post(`http://localhost:8080/api/v1/${id}/image/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

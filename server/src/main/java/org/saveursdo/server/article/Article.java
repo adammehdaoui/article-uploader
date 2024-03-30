@@ -31,6 +31,10 @@ public class Article {
         return imageLink;
     }
 
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
+    }
+
     @Override
     public boolean equals(Object o){
         return o instanceof Article a

@@ -17,7 +17,7 @@ export default function ArticleCard({
       <CardContent>
         Content : {content}; Image path is {imageLink || "no set"}
       </CardContent>
-      <DropZone />
+      <DropZone id={id}/>
     </Card>
   );
 }
